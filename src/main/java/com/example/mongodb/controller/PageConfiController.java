@@ -28,4 +28,10 @@ public class PageConfiController {
     }
 
 
+    @ResponseBody
+    @GetMapping("/findAllDistinctModule")
+    public Msg findAllDistinctModule(@RequestParam(value = "module") String module){
+        return pageConfigService.findAllDistincModule(module);
+    }
+
 }
